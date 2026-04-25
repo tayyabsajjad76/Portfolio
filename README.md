@@ -53,7 +53,7 @@ GitHub: @tayyabsajjad76
 
 Email: mtayyabsajjad76@gmail.com
 
-LinkedIn: [(Click Me/)](https://www.linkedin.com/in/tayyabsajjadoffical/)
+LinkedIn: [(Click Me)](https://www.linkedin.com/in/tayyabsajjadoffical/)
 
 
 📄 License

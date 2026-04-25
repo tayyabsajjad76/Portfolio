@@ -50,8 +50,10 @@ No dependencies. No build step. Just open and go.
 📬 Contact
 
 GitHub: @tayyabsajjad76
+
 Email: mtayyabsajjad76@gmail.com
-LinkedIn: [(https://www.linkedin.com/in/tayyabsajjadoffical/)](https://www.linkedin.com/in/tayyabsajjadoffical/)
+
+LinkedIn: [(Click Me/)](https://www.linkedin.com/in/tayyabsajjadoffical/)
 
 
 📄 License

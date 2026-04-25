@@ -1,15 +1,65 @@
 #skills {
   padding: 5rem 0;
   background-color: #f3f4f6;
+  overflow-x: hidden;
 }
 html.dark #skills {
   background-color: #1f2937;
 }
-#skills .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+
+.skills-slider-outer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
 }
+
+.skills-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.skills-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* ── Arrows ── */
+.skills-arrow {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  background: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #374151;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s, opacity 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+html.dark .skills-arrow {
+  background: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+.skills-arrow:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+html.dark .skills-arrow:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+
 .skill-card {
   background-color: #ffffff;
   padding: 1.5rem;
@@ -17,6 +67,8 @@ html.dark #skills {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   text-align: center;
   transition: transform 0.2s;
+  box-sizing: border-box;
+  padding-inline: 1rem;
 }
 html.dark .skill-card {
   background-color: #374151;
@@ -24,6 +76,7 @@ html.dark .skill-card {
 .skill-card:hover {
   transform: translateY(-3px);
 }
+
 .skill-icon-wrap {
   width: 4rem;
   height: 4rem;
@@ -60,10 +113,13 @@ html.dark .skill-icon-wrap.primary-bg i {
 html.dark .skill-icon-wrap.secondary-bg i {
   color: #34d399;
 }
+
 .skill-card h3 {
   font-weight: 600;
   margin-bottom: 0.75rem;
+  font-size: 0.95rem;
 }
+
 .skill-bar-track {
   width: 100%;
   background-color: #e5e7eb;
@@ -91,10 +147,4 @@ html.dark .skill-bar-fill.primary-fill {
 }
 html.dark .skill-bar-fill.secondary-fill {
   background: linear-gradient(90deg, var(--secondary-dark), #10b981);
-}
-
-@media (min-width: 768px) {
-  #skills .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }

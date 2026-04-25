@@ -1,0 +1,136 @@
+#testimonials {
+  padding: 5rem 0;
+}
+
+.testi-slider-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.testi-slider {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.testi-slide {
+  min-width: 50%;
+  padding: 0 0.5rem;
+}
+
+.testi-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  border-left: 4px solid var(--primary-light);
+  max-width: 700px;
+  margin: 0 auto;
+}
+html.dark .testi-card {
+  background-color: #1f2937;
+  border-left-color: var(--primary-dark);
+}
+.testi-stars {
+  color: #f59e0b;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+.testi-text {
+  font-style: italic;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+html.dark .testi-text {
+  color: #d1d5db;
+}
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.testi-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-light),
+    var(--secondary-light)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.testi-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.testi-role {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+html.dark .testi-role {
+  color: #9ca3af;
+}
+
+.testi-slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.testi-prev,
+.testi-next {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #1f2937;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+html.dark .testi-prev,
+html.dark .testi-next {
+  background: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+.testi-prev:hover,
+.testi-next:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+}
+.testi-dots {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.testi-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+  padding: 0;
+}
+html.dark .testi-dot {
+  background-color: #4b5563;
+}
+.testi-dot.active {
+  background-color: var(--primary-light);
+  transform: scale(1.3);
+}

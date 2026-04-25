@@ -1,0 +1,100 @@
+#skills {
+  padding: 5rem 0;
+  background-color: #f3f4f6;
+}
+html.dark #skills {
+  background-color: #1f2937;
+}
+#skills .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.skill-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s;
+}
+html.dark .skill-card {
+  background-color: #374151;
+}
+.skill-card:hover {
+  transform: translateY(-3px);
+}
+.skill-icon-wrap {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.skill-icon-wrap.primary-bg {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+html.dark .skill-icon-wrap.primary-bg {
+  background-color: rgba(37, 99, 235, 0.15);
+}
+.skill-icon-wrap.secondary-bg {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+html.dark .skill-icon-wrap.secondary-bg {
+  background-color: rgba(5, 150, 105, 0.15);
+}
+.skill-icon-wrap i {
+  font-size: 1.875rem;
+}
+.skill-icon-wrap.primary-bg i {
+  color: var(--primary-light);
+}
+html.dark .skill-icon-wrap.primary-bg i {
+  color: #60a5fa;
+}
+.skill-icon-wrap.secondary-bg i {
+  color: var(--secondary-light);
+}
+html.dark .skill-icon-wrap.secondary-bg i {
+  color: #34d399;
+}
+.skill-card h3 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.skill-bar-track {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.625rem;
+  overflow: hidden;
+}
+html.dark .skill-bar-track {
+  background-color: #4b5563;
+}
+.skill-bar-fill {
+  height: 0.625rem;
+  border-radius: 9999px;
+  width: 0%;
+  transition: width 1.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skill-bar-fill.primary-fill {
+  background: linear-gradient(90deg, var(--primary-light), #60a5fa);
+}
+html.dark .skill-bar-fill.primary-fill {
+  background: linear-gradient(90deg, var(--primary-dark), #3b82f6);
+}
+.skill-bar-fill.secondary-fill {
+  background: linear-gradient(90deg, var(--secondary-light), #34d399);
+}
+html.dark .skill-bar-fill.secondary-fill {
+  background: linear-gradient(90deg, var(--secondary-dark), #10b981);
+}
+
+@media (min-width: 768px) {
+  #skills .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

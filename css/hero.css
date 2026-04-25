@@ -1,0 +1,80 @@
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+}
+#home .hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.5rem;
+  gap: 3rem;
+}
+#home .hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+#home .hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #4b5563;
+  max-width: 32rem;
+  line-height: 1.7;
+}
+html.dark #home .hero-text p {
+  color: #d1d5db;
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+.profile-ring {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--primary-light);
+}
+html.dark .profile-ring {
+  border-color: var(--primary-dark);
+}
+.profile-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary-light);
+  opacity: 0.08;
+}
+
+@media (min-width: 768px) {
+  #home .hero-inner {
+    flex-direction: row;
+    padding: 5rem 1.5rem;
+  }
+  #home .hero-text {
+    flex: 1;
+  }
+  #home .hero-text h1 {
+    font-size: 3.5rem;
+  }
+  #home .hero-image {
+    flex: 0 0 auto;
+  }
+  #home .profile-ring {
+    width: 20rem;
+    height: 20rem;
+  }
+}

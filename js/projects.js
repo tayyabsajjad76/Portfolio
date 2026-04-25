@@ -2,7 +2,9 @@ const sliderDotsContainer = document.getElementById("slider-dots");
 let currentSlide = 0;
 
 function getCardsPerPage() {
-  return window.innerWidth < 768 ? 1 : 3;
+  if (window.innerWidth < 768) return 1;
+  if (window.innerWidth < 1024) return 2;
+  return 3;
 }
 
 function getVisibleCards() {

@@ -128,4 +128,4 @@ I'm a passionate **FullStack Developer** and Computer Science student at **COMSA
 
 ---
 
-<p align="center">Designed & Built with ❤️ by <strong>Tayyab Sajjad</strong></p>
+<p align="center">Designed & Built with by <strong>Tayyab Sajjad</strong></p>

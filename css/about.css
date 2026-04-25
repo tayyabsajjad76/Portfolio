@@ -1,6 +1,9 @@
 #about {
   padding: 5rem 0;
   background-color: #f3f4f6;
+  overflow-x: hidden; /* kill right bleed */
+  box-sizing: border-box;
+  width: 100%;
 }
 html.dark #about {
   background-color: #1f2937;
@@ -10,10 +13,13 @@ html.dark #about {
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 #about .about-image-wrap {
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 #about .about-image-wrap > div {
   width: 16rem;
@@ -26,6 +32,11 @@ html.dark #about {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#about .about-content {
+  min-width: 0; /* prevent flex child from overflowing */
+  width: 100%;
+  box-sizing: border-box;
 }
 #about .about-content h3 {
   font-size: 1.5rem;
@@ -103,15 +114,36 @@ html.dark .info-card p {
   #about .about-inner {
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
   }
   #about .about-image-wrap {
-    flex: 0 0 280px;
+    flex: 0 0 220px; /* shrink from 280px to fit tablet better */
+    max-width: 220px;
+  }
+  #about .about-image-wrap > div {
+    width: 100%;
+    height: 14rem;
   }
   #about .about-content {
-    flex: 1;
-    padding-left: 3rem;
+    flex: 1 1 0%;
+    min-width: 0; /* critical: prevent flex overflow */
+    padding-left: 2rem;
   }
   #about .info-cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #about .about-image-wrap {
+    flex: 0 0 280px;
+    max-width: 280px;
+  }
+  #about .about-image-wrap > div {
+    width: 16rem;
+    height: 16rem;
+  }
+  #about .about-content {
+    padding-left: 3rem;
   }
 }

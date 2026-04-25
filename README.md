@@ -51,7 +51,7 @@ No dependencies. No build step. Just open and go.
 
 GitHub: @tayyabsajjad76
 Email: mtayyabsajjad76@gmail.com
-LinkedIn: [(add your LinkedIn)](https://www.linkedin.com/in/tayyabsajjadoffical/)
+LinkedIn: [(https://www.linkedin.com/in/tayyabsajjadoffical/)](https://www.linkedin.com/in/tayyabsajjadoffical/)
 
 
 📄 License

@@ -3,8 +3,8 @@
 A modern, fully responsive personal portfolio website built with vanilla HTML, CSS, and JavaScript. Designed to showcase my projects, skills, and experience as a FullStack Developer.
 
 🚀 Live Demo
-View Portfolio
-
+[View Portfolio
+](https://tayyabsajjad76.github.io/Portfolio/)
 ✨ Features
 
 Responsive design across all screen sizes (mobile, tablet, desktop)
